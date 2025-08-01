@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YOU'VE BEEN HACKED!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: red;
+      text-shadow: 2px 2px green;
+      animation: glitch 1s infinite;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px green; transform: translate(0px, 0px); }
+      25% { text-shadow: -2px -2px lime; transform: translate(-2px, 2px); }
+      50% { text-shadow: 2px -2px red; transform: translate(2px, -2px); }
+      75% { text-shadow: -2px 2px cyan; transform: translate(-2px, -2px); }
+      100% { text-shadow: 2px 2px green; transform: translate(0px, 0px); }
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px red;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: darkred;
+      box-shadow: 0 0 20px red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gambar URL -->
+  <img src="https://i.postimg.cc/W4030DM0/rizz-crax.png" alt="Rizz Crax Logo">
+
+  <!-- Teks -->
+  <h1>YOU'VE BEEN HACKED!</h1>
+  <h2>Hacked by Rizz Crax</h2>
+
+  <!-- Tombol Play -->
+  <button onclick="playSound()">▶ Play Sound</button>
+
+  <!-- Audio -->
+  <audio id="bgm" loop>
+    <source src="https://files.catbox.moe/syjov8.mp4" type="audio/mp4">
+    Browser kamu tidak support audio.
+  </audio>
+
+  <script>
+    function playSound() {
+      const audio = document.getElementById("bgm");
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
